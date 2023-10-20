@@ -59,7 +59,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  labelText: "Shafira Halmahera",
+                  labelText: "Shafira Halmaher",
                   hintText: "Ubah Nama",
                   contentPadding:
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
