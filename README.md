@@ -1,4 +1,6 @@
-# plantsatu
+# PlantApp
+Dalam projek Ujian Tengah Semester mata kuliah Pemrograman Mobile ini, saya 
+membuat aplikasi sederhana yaitu "Plant App" dimana aplikasi tersebut pengguna dapat melihat-lihat berbagai jenis tanaman. Kemudian pengguna juga dapat menemukan daftar beragam produk tanaman beserta detailnya, termasuk nama tanaman, harga, dan deskripsi singkat yang memberikan informasi tentang tanaman tersebut. Selain itu pengguna dapat menambahkan maupun mengurangi tanaman-tanaman yang ingin di beli ke dalam keranjang belanja yang ada.  
 
 A new Flutter project.
 
