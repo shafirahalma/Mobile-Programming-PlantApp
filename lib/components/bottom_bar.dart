@@ -4,6 +4,7 @@ import 'package:plantsatu/cart/cart_page.dart';
 import 'package:plantsatu/pages/profile.dart';
 import '../pages/home/home_page.dart';
 import '../style/app_style.dart';
+import 'package:plantsatu/pages/contact.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class BottomBar extends StatefulWidget {
@@ -22,6 +23,7 @@ class _BottomBarState extends State<BottomBar> {
     HomePage(),
     CartPage(),
     ProfilePage(),
+    ContactPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -78,6 +80,17 @@ class _BottomBarState extends State<BottomBar> {
               ),
             ),
             label: 'Profile',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(AppStyle.contactIcon),
+            activeIcon: SvgPicture.asset(
+              AppStyle.contactIcon,
+              colorFilter: const ColorFilter.mode(
+                AppStyle.primarySwatch,
+                BlendMode.srcIn,
+              ),
+            ),
+            label: 'Contact',
           ),
         ],
         currentIndex: _selectedIndex,

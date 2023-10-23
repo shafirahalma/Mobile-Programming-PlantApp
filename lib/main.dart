@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plantsatu/cart/cart_page.dart';
+import 'package:plantsatu/pages/contact.dart';
 import 'components/bottom_bar.dart';
 import 'pages/detail/detail_page.dart';
 import 'pages/home/home_page.dart';
@@ -22,10 +23,11 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const WelcomePage(),
         HomePage.routeName: (context) => const HomePage(),
-        DetailPage.routeName: (context) =>  DetailPage(),
+        DetailPage.routeName: (context) => DetailPage(),
         BottomBar.routeName: (context) => const BottomBar(),
         CartPage.routeName: (context) => CartPage(),
         ProfilePage.routeName: (context) => ProfilePage(),
+        ContactPage.routeName: (context) => ContactPage(),
       },
     );
   }

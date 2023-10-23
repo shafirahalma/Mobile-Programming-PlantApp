@@ -13,6 +13,7 @@ class AppStyle {
   static const String favoriteIcon = "assets/icons/favorite.svg";
   static const String cartIcon = "assets/icons/cart.svg";
   static const String profileIcon = "assets/icons/profile.svg";
+  static const String contactIcon = "assets/icons/contact.svg";
 
 // App Colors
   static const primarySwatch = Color(0xff214712);
