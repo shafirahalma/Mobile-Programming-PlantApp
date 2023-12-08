@@ -22,6 +22,7 @@ class _ContactPageState extends State<ContactPage> {
             floating: false,
             pinned: true,
             backgroundColor: Color(0xFF499E70),
+            automaticallyImplyLeading: false,
             flexibleSpace: LayoutBuilder(
               builder: (context, constraints) {
                 return Column(

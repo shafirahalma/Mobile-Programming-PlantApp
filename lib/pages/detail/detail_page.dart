@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
 import '../../animations/fade_animation.dart';
 import '../../animations/shake_transition.dart';
-import '../../data/data.dart';
-import '../../style/app_style.dart';
 import 'components/product_count.dart';
+import 'package:plantsatu/components/bottom_bar.dart';
 
 class DetailPage extends StatelessWidget {
   static const String routeName = '/detail-page';
 
-  DetailPage({
-    super.key,
-  });
+  DetailPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final ProductModel productModel =
-        ModalRoute.of(context)!.settings.arguments as ProductModel;
+    final dynamic items = ModalRoute.of(context)!.settings.arguments as dynamic;
     Size size = MediaQuery.of(context).size;
     double imageHeight = size.height * 0.6;
     return SafeArea(
@@ -28,8 +24,8 @@ class DetailPage extends StatelessWidget {
               height: imageHeight,
               width: size.width,
               child: FadeAnimation(
-                child: Image.asset(
-                  productModel.image,
+                child: Image.network(
+                  items['image'],
                   fit: BoxFit.cover,
                 ),
               ),
@@ -58,7 +54,7 @@ class DetailPage extends StatelessWidget {
                     ShakeTransition(
                       axis: Axis.vertical,
                       child: Text(
-                        productModel.title,
+                        items['title'],
                         textAlign: TextAlign.start,
                         style: Theme.of(context)
                             .textTheme
@@ -70,7 +66,7 @@ class DetailPage extends StatelessWidget {
                     ShakeTransition(
                       axis: Axis.vertical,
                       child: Text(
-                        "\$${productModel.price}",
+                        "\$${items['price']}",
                         style: Theme.of(context).textTheme.titleLarge!.copyWith(
                               fontWeight: FontWeight.w600,
                               color: Color.fromARGB(255, 69, 158, 34),
@@ -95,7 +91,7 @@ class DetailPage extends StatelessWidget {
                     ShakeTransition(
                       axis: Axis.vertical,
                       child: Text(
-                        productModel!.dec,
+                        items['dec'],
                         style: Theme.of(context).textTheme.bodySmall!.copyWith(
                               color: const Color(0xff555050),
                               height: 1.5,
@@ -110,13 +106,21 @@ class DetailPage extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 24),
               alignment: Alignment.bottomCenter,
               child: ShakeTransition(
-                child: ProductCount(model: productModel),
+                child: ProductCount(model: items),
               ),
             ),
             Container(
               alignment: Alignment.topCenter,
-              child: const ListTile(
-                leading: BackButton(),
+              child: ListTile(
+                leading: InkWell(
+                  onTap: () {
+                    Navigator.of(context).pushNamed(BottomBar.routeName);
+                  },
+                  child: Icon(
+                    Icons.arrow_back,
+                    color: Colors.black,
+                  ),
+                ),
                 trailing: Icon(
                   Icons.favorite_rounded,
                   color: Colors.red,

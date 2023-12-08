@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "824649038267",
+    "project_id": "plantaapp-91041",
+    "storage_bucket": "plantaapp-91041.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824649038267:android:fddb61c2a3ed546c26ec9e",
+        "android_client_info": {
+          "package_name": "com.example.plantsatu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5lTxwLMVNvev66r3WoLZHkbpSdD-tpzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

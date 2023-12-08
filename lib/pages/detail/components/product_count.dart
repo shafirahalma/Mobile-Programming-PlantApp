@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:plantsatu/cart/cart_page.dart';
 import 'package:plantsatu/data/cart_data.dart';
-import 'package:plantsatu/data/data.dart';
 
 import '../../../style/app_style.dart';
 
 class ProductCount extends StatefulWidget {
-  ProductModel model;
+  dynamic model;
   ProductCount({required this.model, super.key});
 
   @override
@@ -63,7 +62,9 @@ class _ProductCountState extends State<ProductCount> {
         Expanded(
           child: ElevatedButton(
             onPressed: () {
-              cartData.add(CartData(model: widget.model, count: productCount));
+              Cart cart = new Cart();
+              cart.addCart(widget.model, productCount);
+              // cartData.add(CartData(model: widget.model, count: productCount));
               showDialog(
                 context: context,
                 builder: (BuildContext context) {
